@@ -1,0 +1,16 @@
+@import "../shared/styles/base";
+@import "../shared/styles/mixins";
+.main {
+  margin: 1rem auto;
+  width: 80vw;
+}
+h2 {
+  margin-bottom: 2rem;
+}
+input[type="text"] {
+  @include textinput(80%);
+  margin-right: 1rem;
+}
+input[type="button"] {
+  @include buttons(limegreen, green, calc(19% - 1rem));
+}

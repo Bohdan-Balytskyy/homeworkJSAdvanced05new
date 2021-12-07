@@ -1,0 +1,32 @@
+@import "../shared/styles/base";
+@import "../shared/styles/mixins";
+.main {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 10rem;
+  .box {
+    width: 15rem;
+    height: 15rem;
+    text-align: center;
+    border: 1px solid lightgray;
+    h4 {
+      color: red;
+      height: 2rem;
+      border-bottom: 1px solid lightgray;
+    }
+    .image {
+      height: 10rem;
+      width: 15rem;
+      img {
+        width: 98%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    input[type="button"] {
+      @include buttons(limegreen, green, 80%);
+      margin-top: 0.5rem;
+    }
+  }
+}

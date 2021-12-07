@@ -1,0 +1,48 @@
+@import "../shared/styles/_base.scss";
+@import "../shared/styles/_mixins.scss";
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  width: 100%;
+  table-layout: fixed;
+  tr {
+    height: 3rem;
+    width: 100%;
+    &:hover {
+      background-color: lightgrey;
+    }
+  }
+  th {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+  .th3,
+  .th4 {
+    width: 22.5%;
+  }
+  .th2,
+  .th5,
+  .th6 {
+    width: 14.5%;
+  }
+  .th1 {
+    width: 10%;
+  }
+  td {
+    text-align: center;
+    overflow: hidden;
+  }
+  .edit {
+    @include buttons(gold, goldenrod, 3rem, black);
+  }
+  .delete {
+    @include buttons(red, firebrick, 3.5rem);
+  }
+  .save {
+    @include buttons(limegreen, green, 3rem);
+  }
+  input[type="text"] {
+    @include textinput(100%);
+  }
+}

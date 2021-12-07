@@ -1,0 +1,68 @@
+@import "../shared/styles/base";
+@import "../shared/styles/mixins";
+.main {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  padding: 2rem 0;
+  .main__side {
+    width: 49%;
+    padding: 5px;
+    input[type="text"],
+    input[type="password"] {
+      @include textinput(100%);
+      margin-top: 10px;
+      margin-bottom: 10px;
+      height: 2.5rem;
+    }
+    .addUser {
+      @include buttons(limegreen, green, 100%);
+    }
+    .editUser {
+      @include buttons(rgb(70, 120, 128), rgb(0, 102, 128), 100%);
+    }
+    .addUser,
+    .editUser {
+      margin-top: 10px;
+      height: 2.5rem;
+    }
+    table {
+      border-spacing: 1px;
+      border-collapse: separate;
+      margin-top: 2rem;
+      width: 100%;
+      table-layout: fixed;
+      tr {
+        height: 3rem;
+        width: 100%;
+      }
+      th {
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+      }
+      .th3,
+      .th4 {
+        width: 22.5%;
+      }
+      .th2,
+      .th5,
+      .th6 {
+        width: 14.5%;
+      }
+      .th1 {
+        width: 10%;
+      }
+      td {
+        text-align: center;
+        overflow: hidden;
+      }
+      .edit {
+        @include buttons(gold, goldenrod, 3rem, black);
+      }
+      .delete {
+        @include buttons(red, firebrick, 3.5rem);
+      }
+    }
+  }
+}

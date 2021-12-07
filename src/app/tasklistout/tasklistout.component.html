@@ -1,0 +1,6 @@
+<div class="main">
+    <h2>Count of task: {{count}}</h2>
+    <input type="text" name="task" [(ngModel)]="text">
+    <input type="button" value="Add" (click)="add()">
+    <app-tasklist (fromchild)="changeCount($event)" [newTask]="newTask"></app-tasklist>
+</div>

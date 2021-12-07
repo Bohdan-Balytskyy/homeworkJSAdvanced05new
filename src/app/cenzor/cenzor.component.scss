@@ -1,0 +1,60 @@
+@import "../shared/styles/base";
+@import "../shared/styles/mixins";
+* {
+  font-size: 1rem;
+}
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  margin: auto;
+  width: 600px;
+  height: 400px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .badWords {
+    width: 32.5rem;
+    text-align: left;
+    height: 2rem;
+    font-weight: bold;
+    span {
+      color: brown;
+      line-height: 2rem;
+    }
+  }
+  .box {
+    margin: 0.6rem;
+    input[type="text"] {
+      @include textinput(20rem);
+    }
+    input[type="button"] {
+      margin: 0 3px;
+    }
+    #add {
+      @include buttons(gold, goldenrod, 6rem, black);
+    }
+    #reset {
+      @include buttons(red, firebrick, 6rem);
+    }
+    button {
+      @include buttons(limegreen, green, 32.5rem);
+    }
+    textarea {
+      border: 1px solid lightgray;
+      width: 32.5rem;
+      padding: 5px;
+      line-height: 30px;
+      border-radius: 5px;
+      &:focus {
+        outline: 0;
+        border: 1px solid white;
+        box-shadow: 0 0 0 2px rgba(135, 206, 235, 0.5);
+      }
+    }
+  }
+}
